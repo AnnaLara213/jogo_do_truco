@@ -1,48 +1,70 @@
-Jogo de Truco
-Este é um jogo de Truco implementado em C para dois jogadores. O objetivo do jogo é ser o primeiro a alcançar 12 pontos, com cada rodada valendo pontos que podem aumentar conforme as ações dos jogadores.
+# Jogo de Truco
 
-Regras Básicas
-O jogo começa com os jogadores recebendo 3 cartas cada, distribuídas aleatoriamente de um baralho de 40 cartas.
+## Descrição
+Este é um **jogo de Truco** implementado em **C** para dois jogadores. O objetivo do jogo é ser o primeiro a alcançar **12 pontos**, com cada rodada valendo pontos que podem aumentar conforme as ações dos jogadores. O jogo segue as regras tradicionais do Truco, com a adição de opções estratégicas como **aumentar a pontuação** e **desistir da rodada**.
 
-O jogador 1 pode pedir um aumento de pontos para a rodada, que será aceito ou recusado pelo jogador 2.
+---
 
-O valor da rodada pode aumentar de 1 para 3, depois para 6 e, por fim, para 9 pontos. Não é possível aumentar mais após a rodada atingir 9 pontos.
+## Regras Básicas
 
-Os jogadores podem desistir da rodada a qualquer momento, concedendo os pontos ao adversário.
+- O jogo começa com os jogadores recebendo **3 cartas** cada, distribuídas aleatoriamente de um **baralho de 40 cartas**.
+- O **Jogador 1** pode **pedir um aumento** de pontos para a rodada, que será **aceito ou recusado** pelo **Jogador 2**.
+- O valor da rodada pode ser **aumentado** de **1 ponto** para **3**, depois para **6** e, por fim, para **9 pontos**. Não é possível aumentar mais após atingir 9 pontos.
+- Os jogadores podem **desistir** da rodada a qualquer momento, concedendo os pontos ao adversário.
+- Cada jogador joga **uma carta por vez**. O vencedor da rodada é determinado pela carta de **maior valor**, de acordo com a hierarquia do Truco.
 
-Cada jogador joga uma carta por vez. O vencedor da rodada é determinado pela carta mais alta, de acordo com a tabela do Truco.
+---
 
-Funcionalidades
-Embaralhamento do baralho: O baralho é embaralhado aleatoriamente antes do início de cada rodada.
+## Funcionalidades
 
-Distribuição das cartas: Cada jogador recebe 3 cartas para jogar durante a rodada.
+### 1. **Embaralhamento do Baralho**
+O baralho é embaralhado aleatoriamente antes do início de cada rodada.
 
-Aumento de pontos: O jogador pode solicitar um aumento na pontuação da rodada, mas o adversário tem a opção de aceitar ou recusar esse aumento.
+### 2. **Distribuição das Cartas**
+Cada jogador recebe **3 cartas** para jogar durante a rodada.
 
-Exibição da mão: As cartas dos jogadores são exibidas durante a rodada, para que o jogador saiba suas opções de jogo.
+### 3. **Aumento de Pontos**
+O jogador pode **solicitar um aumento** na pontuação da rodada, mas o adversário tem a opção de **aceitar** ou **recusar** esse aumento.
 
-Desistência: O jogador pode desistir de uma rodada, e o outro jogador ganha os pontos da rodada.
+### 4. **Exibição das Cartas**
+As cartas de cada jogador são exibidas, permitindo ao jogador escolher qual carta jogar.
 
-Jogada de cartas: O jogador escolhe uma carta para jogar e tenta vencer o adversário na rodada.
+### 5. **Desistência**
+O jogador pode **desistir** da rodada, concedendo os pontos da rodada ao adversário.
 
-Como Jogar
-O jogo começa com o embaralhamento do baralho e a distribuição das cartas para os jogadores.
+### 6. **Jogada de Cartas**
+O jogador escolhe uma carta para jogar e tenta **vencer a rodada** com a carta de maior valor.
 
-Durante o turno, o jogador pode escolher uma das seguintes opções:
+---
 
-Aumentar: Solicitar um aumento na pontuação da rodada.
+## Como Jogar
 
-Aceitar aumento: Aceitar o aumento solicitado pelo outro jogador.
+1. **Início do Jogo**: O jogo começa com o embaralhamento do baralho e a distribuição das cartas para os jogadores.
+2. **Durante o Turno**: O jogador pode escolher uma das seguintes opções:
+   - **Aumentar**: Solicitar um aumento na pontuação da rodada.
+   - **Aceitar Aumento**: Aceitar o aumento solicitado pelo adversário.
+   - **Recusar Aumento**: Recusar o aumento solicitado pelo adversário.
+   - **Desistir**: Desistir da rodada e conceder os pontos ao adversário.
+   - **Jogar uma Carta**: Jogar uma carta da mão e tentar vencer a rodada.
+   - **Terminar Turno**: Finalizar o turno sem jogar.
+3. O jogo continua até que um dos jogadores alcance **12 pontos**, vencendo a partida.
 
-Recusar aumento: Recusar o aumento solicitado pelo outro jogador.
+---
 
-Desistir: Desistir da rodada e conceder os pontos ao adversário.
+## Estrutura do Código
 
-Jogar uma carta: Jogar uma carta da mão e tentar vencer a rodada.
+- **Função `inicializar_baralho()`**: Inicializa o baralho de 40 cartas.
+- **Função `embaralhar_baralho()`**: Embaralha o baralho antes de cada rodada.
+- **Função `distribuir_cartas()`**: Distribui 3 cartas para cada jogador no início de uma rodada.
+- **Função `aumentar()`**: Permite a um jogador pedir um aumento na pontuação da rodada.
+- **Função `jogar_turno()`**: Controla as ações de cada jogador durante um turno.
+- **Função `jogar_rodada()`**: Gerencia o fluxo de uma rodada completa.
 
-Terminar turno: Finalizar o turno sem jogar.
+---
 
-O jogo continua até que um dos jogadores alcance 12 pontos, vencendo o jogo.
+## Objetivo
 
-Objetivo
-O objetivo do jogo é ser o primeiro a atingir 12 pontos. A pontuação das rodadas é determinada pela vitória de cada jogador, dependendo de quem tiver a carta de maior valor durante o turno. Se um jogador desistir, o adversário ganha os pontos da rodada.
+O objetivo é ser o primeiro a atingir **12 pontos**, vencendo as rodadas através de jogadas estratégicas com as cartas, aumento de pontos e decisões durante o jogo.
+
+
+
